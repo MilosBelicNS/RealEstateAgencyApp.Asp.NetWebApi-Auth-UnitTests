@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
 using System.Web.Http;
+
+using Microsoft.AspNetCore.Cors;
 using Microsoft.Owin.Security.OAuth;
 using Microsoft.Practices.Unity;
 using Newtonsoft.Json.Serialization;
@@ -22,6 +24,7 @@ namespace RealEstateAgencyApp.Asp.NetWebApi
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 
@@ -30,6 +33,8 @@ namespace RealEstateAgencyApp.Asp.NetWebApi
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+           
 
             // Unity
             var container = new UnityContainer();
