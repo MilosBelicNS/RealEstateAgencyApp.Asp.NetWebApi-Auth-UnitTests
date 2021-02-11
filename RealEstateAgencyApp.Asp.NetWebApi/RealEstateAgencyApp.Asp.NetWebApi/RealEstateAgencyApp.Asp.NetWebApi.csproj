@@ -291,6 +291,10 @@
     <Compile Include="Migrations\202101291330300_Prva.Designer.cs">
       <DependentUpon>202101291330300_Prva.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202102112134127_Second.cs" />
+    <Compile Include="Migrations\202102112134127_Second.Designer.cs">
+      <DependentUpon>202102112134127_Second.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -397,6 +401,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101291330300_Prva.resx">
       <DependentUpon>202101291330300_Prva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102112134127_Second.resx">
+      <DependentUpon>202102112134127_Second.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

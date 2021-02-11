@@ -147,3 +147,6 @@ D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\Rea
 D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi.Tests\obj\Debug\RealEstateAgencyApp.Asp.NetWebApi.Tests.csproj.CopyComplete
 D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi.Tests\obj\Debug\RealEstateAgencyApp.Asp.NetWebApi.Tests.dll
 D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi.Tests\obj\Debug\RealEstateAgencyApp.Asp.NetWebApi.Tests.pdb
+D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi.Tests\bin\Debug\Microsoft.Owin.Cors.dll
+D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi.Tests\bin\Debug\System.Web.Cors.dll
+D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi.Tests\bin\Debug\Microsoft.Owin.Cors.xml

@@ -30,7 +30,8 @@ namespace RealEstateAgencyApp.Asp.NetWebApi.Migrations
                 new Property() { Place = "Novi Sad", AgencyCode = "Nek01", ConstructionYear = 1974, Quadrature = 50, Price = 40000, AgentId = 1 },
                 new Property() { Place = "Subotica", AgencyCode = " Nek02", ConstructionYear = 1990, Quadrature = 60, Price = 50000, AgentId = 2 },
                 new Property() { Place = "Beograd", AgencyCode = "Nek03", ConstructionYear = 1995, Quadrature = 55, Price = 45000, AgentId = 3 },
-                new Property() { Place = "Zrenjanin", AgencyCode = "Nek04", ConstructionYear = 2010, Quadrature = 70, Price = 60000, AgentId = 1 });
+                new Property() { Place = "Zrenjanin", AgencyCode = "Nek04", ConstructionYear = 2010, Quadrature = 70, Price = 60000, AgentId = 1 },
+                new Property() { Place = "Sremska Mitrovica", AgencyCode = "Nek05", ConstructionYear = 2011, Quadrature = 72, Price = 61000, AgentId = 3 });
 
             context.SaveChanges();
         }

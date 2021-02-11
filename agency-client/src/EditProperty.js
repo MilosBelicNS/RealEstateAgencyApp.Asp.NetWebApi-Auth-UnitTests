@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import axios from "axios"
 
-class CreateProperty extends Component {
+class EditProperty extends Component {
 
     constructor() {
         super()
@@ -55,18 +55,7 @@ class CreateProperty extends Component {
         this.setState({ agent: event.target.value });
     }//setuj vrednost za dropdown
 
-   /* handleOnBlur(event) {
-        const value = event.target.value;
-        const errors = [...this.state.errors];
-
-        if (value === "") {
-            errors[event.target.name] = true;
-            this.setState({ errors });
-        } else {
-            errors[event.target.name] = false;
-            this.setState({ errors });
-        }//metoda za ispis gresaka
-    }*/
+   
 
     componentDidMount() {
         fetch("https://localhost:44378/api/Properties/", { method: "GET" })
@@ -85,104 +74,133 @@ class CreateProperty extends Component {
 
         console.log(this.state.errors);
         return (
-            <div className="col-sm-6 col-sm-push-4">
-                <form className="form-group" style={{ marginTop: "50px" }}>
-                    <h4>Edit property:</h4>
-                    <label> <strong> Agent: </strong> </label>
-                    <select name="agent"
-                            className="form-control" 
-                            onChange={this.handleSelectChange} 
-                            value={this.state.agent}>
-                        [{option1},{options}]
-                    </select>
-                    <br />
-                    <label> <strong> Place: </strong> </label>
-                    <input type="text"
-                        className="form-control"
-                        name="place"
-                        value={this.state.place}
-                        onChange={this.handleChange}
-                        onBlur={this.handleOnBlur}
-                        required
-                        minLength="3"
-                        maxLength="40"
 
-                    />
-                   {/* {
-                        this.state.errors['name'] && (
-                            <small className="text-danger">This field is required!</small>
-                        )
-                    }*/}
+            <div className='row'>
+
+
+               <div class="col-sm-offset-4 col-sm-4" style={{marginLeft:'30%'}}>
+            
+                   <form className="form-horizontal" style={{ marginTop: "50px" }}>
+                       <h4 style={{marginLeft:'110px'}}>Edit property</h4>
+                          <br/>
+                           <div className="form-inline">
+                               <label className="control-label col-sm-pull-4"> 
+                                 <strong> Agent: </strong> 
+                               </label>
+                                  <div className='col-sm-8'>
+                                     <select style={{width:'120%',marginLeft:'70px'}}
+                                             name="agent"
+                                             className="form-control" 
+                                             onChange={this.handleSelectChange} 
+                                             value={this.state.agent}>
+                                            [{option1},{options}]
+                                     </select>
+                                 </div>
+                         </div>
+                         <br />
+                          <div className='form-inline'>
+                             <label className="control-label col-sm-pull-4"> 
+                               <strong> Place: </strong> 
+                             </label>
+                                  <div className='col-sm-8'>
+                                    <input 
+                                            style={{width:'110%', marginLeft:'97px'}}
+                                            type="text"
+                                            className="form-control"
+                                            name="place"
+                                            value={this.state.place}
+                                            onChange={this.handleChange}
+                                            required
+                                            minLength="3"
+                                            maxLength="40"
+
+                                        />
+                                 </div>
+                         </div>
+                   
+                           <br />
+                         <div className='form-inline'>
+                             <label className="control-label col-sm-pull-4"> 
+                                 <strong> Agency code: </strong> 
+                            </label>
+                               <div className='col-sm-8'>
+                                  <input style={{width:'80%',  marginLeft:'101px'}}
+                                         type="text"
+                                         className="form-control"
+                                         name="agencyCode"
+                                         value={this.state.agencyCode}
+                                         onChange={this.handleChange}
+                                         required
+                                         minLength="3"
+                                         maxLength="6"
+                                     />
+                               </div>
+                         </div>
+                   
+                          <br />
+                         <div className='form-inline'>
+                           <label className="control-label col-sm-pull-4"> 
+                             <strong> ConstructionYear: </strong> 
+                           </label>
+                               <div className='col-sm-7'>
+                                   <input style={{width:'55%', marginLeft:'134px'}} 
+                                          type="number"
+                                          className="form-control"
+                                          name="constructionYear"
+                                          value={this.state.constructionYear}
+                                          onChange={this.handleChange}
+                                          required
+                                          min="1900"
+                                          max="2018"
+                                       />
+                               </div>
+                         </div>
+                  
                     <br />
-                    <label> <strong> Agency code: </strong> </label>
-                    <input type="text"
-                        className="form-control"
-                        name="agencyCode"
-                        value={this.state.agencyCode}
-                        onChange={this.handleChange}
-                        onBlur={this.handleOnBlur}
-                        required
-                        minLength="3"
-                        maxLength="6"
-                    />
-                   {/* {
-                        this.state.errors['agencyCode'] && (
-                            <small className="text-danger">This field is required! Molim Vas uneseti interval izmedju 1960-1994. godine</small>
-                        )
-                    }*/}
+                         <div className='form-inline'>
+                           <label className="control-label col-sm-pull-4"> 
+                              <strong> Quadrature: </strong> 
+                           </label>
+                              <div className='col-sm-7'>
+                                     <input style={{width:'55%', marginLeft:'177px'}}
+                                            type="number"
+                                            className="form-control"
+                                            name="quadrature"
+                                            value={this.state.quadrature}
+                                            onChange={this.handleChange}
+                                            required
+                                            min="3"
+                                            max="1500"
+                                        />
+                             </div>
+                       </div>
+                   
+                          <br />
+                       <div className='form-inline'>
+                            <label className="control-label col-sm-pull-4"> 
+                              <strong> Price: </strong> 
+                            </label>
+                              <div className='col-sm-7'>
+                                    <input style={{width:'65%', marginLeft:'207px'}}
+                                           type="number"
+                                           className="form-control"
+                                           name="price"
+                                           value={this.state.price}
+                                           onChange={this.handleChange}
+                                           
+                                      />
+                               </div>
+                     </div>
+                  
                     <br />
-                    <label> <strong> Construction year: </strong> </label>
-                    <input type="number"
-                        className="form-control"
-                        name="constructionYear"
-                        value={this.state.constructionYear}
-                        onChange={this.handleChange}
-                        onBlur={this.handleOnBlur}
-                        required
-                        min="1900"
-                        max="2018"
-                    />
-                   {/* {
-                        this.state.errors['godinaZaposlenja'] && (
-                            <small className="text-danger">Ovo polje je obavezno! Molim Vas uneseti interval izmedju 2001-2019. godine</small>
-                        )
-                    }*/}
-                    <br />
-                    <label> <strong> Quadrature: </strong> </label>
-                    <input type="number"
-                        className="form-control"
-                        name="quadrature"
-                        value={this.state.quadrature}
-                        onChange={this.handleChange}
-                        onBlur={this.handleOnBlur}
-                        required
-                        min="3"
-                        max="1500"
-                    />
-                    {/*{
-                        this.state.errors['rola'] && (
-                            <small className="text-danger">Ovo polje je obavezno!</small>
-                        )
-                    }*/}
-                    <br />
-                    <label> <strong> Price: </strong> </label>
-                    <input type="number"
-                        className="form-control"
-                        name="price"
-                        value={this.state.price}
-                        onChange={this.handleChange}
-                        onBlur={this.handleOnBlur}
-                    />
-                    {/*{
-                        this.state.errors['plata'] && (
-                            <small className="text-danger">Ovo polje je obavezno!</small>
-                        )
-                    }*/}
-                    <br />
-                    <button onClick={this.handleSubmit} className="btn btn-primary" style={{ marginRight: "5px" }}> Update  </button>
+                    <div className="form-group">
+                    <button onClick={this.handleSubmit} className="btn btn-info" style={{ marginRight: "195px", backgroundColor:'darkslategray' }}> Update </button>
                     <button onClick={this.handleCancel} className="btn btn-warning"> Cancel  </button>
+                    </div>
                 </form>
             </div>
+            </div>
+            
         )
     }
 }
@@ -190,4 +208,4 @@ class CreateProperty extends Component {
 
 
 
-export default CreateProperty
+export default EditProperty

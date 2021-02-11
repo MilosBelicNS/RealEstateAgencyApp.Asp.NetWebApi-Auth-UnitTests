@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+
 
 
 
@@ -91,51 +90,46 @@ class RegLogForms extends Component {
     render() {
         return (
             
-            <div className= "col-sm-3">
-               {/* <Form>
-  <Form.Group controlId="formBasicEmail">
-    <Form.Label>Email address</Form.Label>
-    <Form.Control type="email" placeholder="Enter email" />
-    <Form.Text className="text-muted">
-      We'll never share your email with anyone else.
-    </Form.Text>
-  </Form.Group>
+            <div className= "container">
+               {/**/}
+   
+                  <div className='row'>
 
-  <Form.Group controlId="formBasicPassword">
-    <Form.Label>Password</Form.Label>
-    <Form.Control type="password" placeholder="Password" />
-  </Form.Group>
-  <Form.Group controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
-  </Form.Group>
-  <Button variant="primary" type="submit">
-    Submit
-  </Button>
-   </Form>*/}
-       
 
-            <form className="form-group" style={{ marginTop: "50px" }}>
-                <label> <strong> Username: </strong> </label>
-                <input type="text"
-                    placeholder="Username/email"
-                    className="form-control"
-                    name="email"
-                    value={this.state.email}
-                    onChange={this.handleChange}
-                />
+                    <form className="form-horizontal" style={{ marginLeft:'36%', marginTop: "10%"}}>
+                        <h3>Register and login</h3>
+                       <br/>
+                      <div className='form-inline'>
+                          <label style={{marginRight:'8px'}} > <strong> Username: </strong> </label>
+                          <div className='col-sm-8'>
+                             <input style={{width:'120%'}}
+                              type="text"
+                              placeholder="Username/email"
+                              className="form-control"
+                              name="email"
+                              value={this.state.email}
+                              onChange={this.handleChange}
+                           />
+                           </div>
+                       </div>
                 <br />
-                <label> <strong> Password: </strong> </label>
-                <input type="password"
-                    placeholder="Password"
-                    className="form-control"
-                    name="password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                />
+                <div className='form-inline'>
+                    <label style={{marginRight:'10px'}}> <strong> Password: </strong> </label>
+                    <div className='col-sm-8'>
+                    <input type="password"
+                           placeholder="Password"
+                           className="form-control"
+                           name="password"
+                           value={this.state.password}
+                           onChange={this.handleChange}
+                      />
+                      </div>
+                      </div>
                 <br />
 
-                {this.state.isLog ? null : <div>
-                    <label> <strong>Repeat password: </strong> </label>
+                {this.state.isLog ? null : <div className='form-inline'>
+                    <label style={{marginRight:'10px'}}> <strong>Password: </strong> </label>
+                    <div className='col-sm-8'>
                     <input type="password"
                         placeholder="Repeat password"
                         className="form-control"
@@ -143,17 +137,24 @@ class RegLogForms extends Component {
                         value={this.state.password2}
                         onChange={this.handleChange}
                     />
+                    </div>
                     <br />
                 </div>
                 
                 }
-
-                <button onClick={this.handleClick} className="btn btn-primary" style={{ marginRight: "5px" }}> {this.state.isLog ? "Registration" : "Log"} </button>
-                <button onClick={this.handleSubmit} className="btn btn-primary" style={{ marginRight: "5px" }}> {this.state.isLog ? "Login" : "Register"}  </button>
-                <button onClick={this.navigateBack} className="btn btn-warning" > Back </button> 
+                 <br /> 
+                 <br />
+                 
+                <button onClick={this.handleClick} className="btn btn-info" style={{ marginRight: "25px" }}> {this.state.isLog ? "Registration" : "Log"} </button>
+                <button onClick={this.navigateBack} className="btn btn-danger" style={{ marginLeft: "15px" }}> Back </button> 
+                <button onClick={this.handleSubmit} className="btn btn-info" style={{ marginLeft: "40px" }}> {this.state.isLog ? "Login" : "Register"}  </button>
+                
                
             </form>
+            
             </div>
+            </div>
+            
         )
     }
 }

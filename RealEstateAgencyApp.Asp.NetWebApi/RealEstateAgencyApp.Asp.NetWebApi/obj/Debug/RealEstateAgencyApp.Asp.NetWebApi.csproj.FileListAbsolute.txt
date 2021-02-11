@@ -292,3 +292,4 @@ D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\Rea
 D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi\bin\System.Numerics.Vectors.xml
 D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi\bin\System.Text.Encodings.Web.xml
 D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi\bin\System.Web.Http.Cors.xml
+D:\Software development\C Sharp Practice\ASP.NET WEB API\RealEstateAgencyApp\RealEstateAgencyApp.Asp.NetWebApi\RealEstateAgencyApp.Asp.NetWebApi\obj\Debug\RealEstateAgencyApp.Asp.NetWebApi.Migrations.Second.resources

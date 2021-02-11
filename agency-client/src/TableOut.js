@@ -38,9 +38,13 @@ class TableOut extends Component {
                 <div>
                     <br/>
                     <br/>
-                    <div className= "col-sm-6 col-sm-push-1">
-                    <Table striped bordered hover variant="dark">
-                        <thead >
+                 <div className= "row" >
+
+                   <div style={{textAlign:'center', marginLeft:'28%'}}>
+                   <h3 style={{backgroundColor:'darkslategray', color:"lightBlue"}}>Properties</h3>
+                   <br/>
+                    <Table striped bordered hover variant="dark" >
+                        <thead>
                             <tr>
                                 <th> Place</th>
                                 <th> AgencyCode</th>
@@ -54,7 +58,8 @@ class TableOut extends Component {
                             {rows}
                         </tbody>
                     </Table>
-                    </div>                    
+                    </div>       
+                    </div>             
                 </div>
             )
         }

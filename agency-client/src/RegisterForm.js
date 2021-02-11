@@ -23,7 +23,7 @@ render(){
 
         !this.state.showForm ? 
         <div className = "col-sm-2 col-sm-push-1">
-            <button onClick={this.handleClick} className="btn btn-succes">Register and Login</button>
+            <button onClick={this.handleClick} className="btn btn-info" style={{marginLeft:'600%', width:'160px'}}>Register and Login</button>
         </div>
         :
         <RegLogForms />
