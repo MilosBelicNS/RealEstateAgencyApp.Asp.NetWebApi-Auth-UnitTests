@@ -21,13 +21,13 @@ namespace RealEstateAgencyApp.Asp.NetWebApi.Repository
 
         public IEnumerable<Property> SearchByYear(int built)
         {
-            var propertiesRes = db.Properties.Where(p => p.ConstructionYear < built).OrderBy(p => p.ConstructionYear);
+            var propertiesRes = db.Properties.Include(p => p.Agent).Where(p => p.ConstructionYear < built).OrderBy(p => p.ConstructionYear);
             return propertiesRes;
         }
 
         public IEnumerable<Property> SearchByQuadrature(Filter filter)
         {
-            var filterProperties = db.Properties.Where(p => p.Quadrature >= filter.Min & filter.Max >= p.Quadrature).OrderBy(p => p.Quadrature);
+            var filterProperties = db.Properties.Include(p => p.Agent).Where(p => p.Quadrature >= filter.Min & filter.Max >= p.Quadrature).OrderBy(p => p.Quadrature);
             return filterProperties;
         }
 
